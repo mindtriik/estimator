@@ -14,12 +14,16 @@ const add = (name, price) => {
     });
 };
 
+
+if (localStorage.getItem(key)) {
+    materialStore.set(JSON.parse (localStorage.getItem(key)));
+}
+
 materialStore.subscribe((items) => {
-    console.log(items, 'materials');
     const jsonString = JSON.stringify(items);
     localStorage.setItem(key, jsonString);
 });
 
 export default {
-    subscribe: materialStore.subscribe, add,
+    subscribe: materialStore.subscribe, add, remove
 }

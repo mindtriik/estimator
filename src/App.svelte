@@ -9,9 +9,13 @@
       <div class="column is-four-fifths">
         <h1 class="title is-1">Project Estimator</h1>
         
-        <Form />
+        <div class="section">
+          <Form />
+        </div>
 
-        <Table />
+        <div class="section">
+          <Table />
+        </div>
         
       </div>
     </div>

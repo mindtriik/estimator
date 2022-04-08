@@ -4,6 +4,7 @@
     export let name = '';
     export let price;
 
+
     $: mode = id === undefined ? "Add" : "Edit";
     $: canSubmit = price === undefined ? false : price !== '' && name !== '';
 
