@@ -14,6 +14,28 @@ const add = (name, price) => {
     });
 };
 
+const edit = (id, name, price) => {
+    materialStore.update ((items) => {
+       const index = items.findIndex((i) => i.id === id);
+
+       items[index].name = name;
+       items[index].price = price;
+
+       return items;
+    });
+};
+
+const remove = (id) => {
+    materialStore.update ((items) => {
+        const idx = items.findIndex((i) => i.id === id);
+
+        items.splice(idx, 1);
+
+        return items;
+    });
+
+};
+
 
 if (localStorage.getItem(key)) {
     materialStore.set(JSON.parse (localStorage.getItem(key)));
@@ -25,5 +47,5 @@ materialStore.subscribe((items) => {
 });
 
 export default {
-    subscribe: materialStore.subscribe, add, remove
+    subscribe: materialStore.subscribe, add, edit, remove
 }
