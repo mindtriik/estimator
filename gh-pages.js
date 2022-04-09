@@ -5,7 +5,7 @@ import ghpages from 'gh-pages'
 ghpages.publish(
     'dist', // path to public directory
     {
-        branch: 'gh-pages',
+        branch: '5-gh-pages',
         repo: 'https://github.com/mindtriik/estimator.git', // Update to point to your repository  
         user: {
             name: 'Donald JB', // update to use your name
