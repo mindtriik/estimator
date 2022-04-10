@@ -1,4 +1,4 @@
-import { publish } from 'gh-pages';
+import ghpages from 'gh-pages';
 
 
 ghpages.publish(
